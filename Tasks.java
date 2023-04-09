@@ -2,7 +2,7 @@
 // который вернет “перевернутый” список.
 
 // import java.util.Collections;
-import java.util.LinkedList;
+// import java.util.LinkedList;
 
 // public class Tasks {
 //     public static void main(String[] args) {
@@ -20,11 +20,12 @@ import java.util.LinkedList;
 
 // Задача 2. Реализуйте очередь с помощью LinkedList со следующими методами: 
 // enqueue() - помещает элемент в конец очереди, 
-// LinkedListue() - возвращает первый элемент из очереди и удаляет его, 
+// dequeue() - возвращает первый элемент из очереди и удаляет его, 
 // first() - возвращает первый элемент из очереди, не удаляя.  
 
 // import java.util.Scanner;
 // import java.util.Arrays;
+
 // public class Tasks {
 //     public static void main(String[] args) {
 //         LinkedList<Object> list = new LinkedList<>(Arrays.asList(1,2,3,4,5));
