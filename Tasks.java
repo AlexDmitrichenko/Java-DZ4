@@ -51,3 +51,60 @@
 //         return list.getFirst();
 //     }
 // }
+
+// Задача 3. В калькулятор добавьте возможность отменить последнюю операцию.
+// Пример  1 + 2 ответ: 3 + 4 ответ: 7 Отмена 3 * 3 ответ: 9 - 1 Ответ 8 Отмена -> 9 
+// Отмена -> 7 Отмена -> 3 + 2 Ответ 5
+
+// public class Tasks {
+//     public static void main(String[] args) {
+//         LinkedList<Double> resList = new LinkedList<Double>(); 
+//         try (Scanner sc = new Scanner(System.in)) { 
+//             System.out.print("Введите первое число: ");
+//             resList.add(sc.nextDouble()); 
+//             sc.nextLine();
+//             while (true) { 
+//                 System.out.print("Выберите действие ( +, -, *, / ) или клавишу [C] для отмены последнего действия: ");
+//                 String Charr = sc.nextLine();
+//                 if ("C".equals(Charr) || "c".equals(Charr)) {                                        
+//                     resList.removeFirst();
+//                     if (resList.isEmpty()) resList.add(0.0); 
+//                 } else {
+//                     System.out.print("Введите второе число: ");
+//                     double Num2 = sc.nextDouble(); 
+//                     calculate(resList, Charr, Num2); 
+//                     sc.nextLine(); 
+//                 }
+//                 System.out.println("Результат: " + resList.getFirst()); 
+//             }
+//         }
+//     }
+
+//     public static void calculate(LinkedList<Double> resList, String Charr, double Num2) { 
+//         double res = resList.getFirst(); 
+//         switch (Charr) { 
+//             case "+":
+//                 resList.add(0, resList.getFirst() + Num2);
+//                 System.out.printf(res + " " + Charr + " " + Num2 + " = " + resList.getFirst() + "\n");
+//                 break;
+//             case "-":
+//                 resList.add(0, resList.getFirst() - Num2);
+//                 System.out.printf(res + " " + Charr + " " + Num2 + " = " + resList.getFirst() + "\n");
+//                 break;
+//             case "*":
+//                 resList.add(0, resList.getFirst() * Num2);
+//                 System.out.printf(res + " " + Charr + " " + Num2 + " = " + resList.getFirst() + "\n");
+//                 break;
+//             case "/":
+//                 if (Num2 == 0) { 
+//                     System.out.println("Ошибка! На ноль делить нельзя");
+//                     break;
+//                 }
+//                 resList.add(0, resList.getFirst() / Num2);
+//                 System.out.printf(res + " " + Charr + " " + Num2 + " = " + resList.getFirst() + "\n");
+//                 break;
+//             default:
+//                 System.out.println("Ошибка! Повториете ввод! ");
+//         }
+//     }
+// }
